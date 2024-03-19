@@ -24,7 +24,7 @@
     }
 
     .branding .header__navd li a {
-        @apply font-medium text-sm text-dark hover:text-berde;
+        @apply font-bold text-base text-dark hover:text-berde uppercase;
     }
 
     .header__action {
@@ -50,16 +50,21 @@
     }
 
     .header__action .header__btn a{
-        @apply flex gap-[1rem] items-center hover:text-berde;
+        @apply flex gap-[1rem] items-center hover:text-berde mt-[1rem] font-semibold;
     }
 
     .header__action .header__btn {
-        @apply pt-5 flex-col gap-3 lg:flex lg:flex-row-reverse;
+        @apply  flex-col gap-10 lg:flex lg:flex-row-reverse mb-3;
     }
 
     .header__action .header__kamote {
         @apply flex gap-5;
     }
+
+     .header__kamote li a {
+        @apply border-solid py-[7px] px-[16px] leading-[1.2] font-[600]
+    }
+
 
     .burgir__menu {
         @apply lg:hidden;
@@ -115,8 +120,8 @@
     }
 
     .banner__item:nth-child(odd) p {
-        @apply text-2xl text-dark px-[2rem] max-w-[35rem] mx-auto
-        md:text-[1.8rem];
+        @apply text-2xl text-dark px-[2rem] max-w-[35rem] mx-auto font-normal
+        md:text-[19px];
     }
     .banner__item:nth-child(even) h2 {
         @apply text-xl font-semibold text-dark 
@@ -124,8 +129,8 @@
     }
 
     .banner__item:nth-child(even) p {
-        @apply text-2xl text-dark max-w-[25rem] mx-auto
-        md:text-[1.7rem];
+        @apply text-2xl text-dark max-w-[25rem] mx-auto text-[16px]
+        md:text-[19px];
     }
 
     .banner__item:last-child h2, .banner__item:last-child p{
@@ -157,6 +162,258 @@
         @apply bg-[#006241]
     }
 
+    .btn {
+        @apply place-self-center;
+    }
+
+    /* LINKS */
+    .links {
+        @apply py-6 border-t-2;
+    }
+    .links__item ul {
+        @apply max-h-[0rem] overflow-hidden transition-all
+        flex flex-col gap-6 md:max-h-[50rem] md:pt-6;
+    }
+
+    .links__item ul.open {
+        @apply max-h-[50rem] pt-6 transition-all;
+    }
+
+    .links__item ul li a {
+        @apply text-gray-500 hover:text-dark hover:font-semibold;
+    }
+
+    .links__item h4 {
+        @apply flex items-center justify-between 
+        font-semibold hover:cursor-pointer;
+    }
+
+    .links__wrapper {
+        @apply grid grid-cols-1 gap-10 md:grid md:grid-cols-6;
+    }
+
+    .links__item h4 i {
+        @apply transition-all md:hidden;
+    }
+
+    .links__item h4 i.open {
+        @apply transform rotate-180 transition-all
+    }
+
+    /* FOOTER */
+    /* .footer {
+        @apply py-5;
+    }
+
+    .footer__wrapper {
+        @apply flex flex-col gap-10;
+    }
+
+    .footer .footer__socials ul {
+        @apply flex flex-row gap-4 ml-[-5px];
+    }
+
+     .footer .footer__socials li a {
+        @apply text-center rounded-[500px] w-10 h-10 p-2 transition-all hover:cursor-pointer bg-dark hover:shadow-md hover:shadow-gray-800;
+    }  
+
+    .footer .footer__socials li a i {
+        @apply text-lg text-center text-white;
+    }
+
+    .footer .footer__details ul {
+        @apply flex flex-col gap-4 md:flex md:flex-row; 
+    }
+
+    .footer .footer__details ul li a {
+        @apply hover:underline;
+    }
+
+    .footer .footer__details ul li a::after {
+        @apply md:content-['|'] md:inline-block md:relative md:ml-3;
+    } */
+
+      /* .footer .footer__details ul li a:last-child ::after{
+        @apply hidden;
+    }   */
+
+    /* .footer .footer__wrapper p {
+        @apply text-gray-500 font-[400] text-sm;
+    } */
+
+    /* -----------FOOTER------------------ */
+  .footer__wrapper {
+    @apply border-t-2 py-6;
+  }
+  .footer__social {
+    @apply flex gap-4;
+  }
+  .footer__social li a {
+    @apply bg-dark text-light px-3 py-2 rounded-full;
+  }
+  .footer__social li:hover {
+    @apply scale-[1.1];
+  }
+  .footer__links {
+    @apply py-6 flex flex-col gap-3
+    md:flex md:flex-row md:gap-0;
+  }
+  .footer__links li {
+    @apply md:px-6 md:border-r-2;
+  }
+  .footer__links li:last-child {
+    @apply md:border-r-0;
+  }
+  .footer p {
+    @apply text-gray-500;
+  }
+
+
+  /* -------------------REWARDS BANNER-------------------------- */
+  .rBanner {
+    @apply bg-bituinBanner 
+    h-[600px] 
+    bg-cover
+    bg-lberde 
+    bg-right-bottom
+    flex
+    text-center
+    md:bg-starBanner
+    md:bg-left
+    md:text-left
+    md:items-center;
+  }
+
+  .rBanner__wrapper {
+    @apply flex flex-col gap-4;
+  }
+
+  .rBanner__wrapper h1 {
+    @apply font-[600] text-2xl;
+  }
+
+  .rBanner__wrapper p {
+    @apply font-[400]
+  }
+
+  .rBanner__wrapper .rBanner__action a{
+    @apply mb-2;
+  }
+
+  /* -----------------------------COFFEE TAB------------------------------------ */
+  .coffee__nav {
+    @apply bg-[#f1f8f5] pt-10;
+  }
+  .coffee__nav h4 {
+    @apply text-2xl font-semibold
+    text-center;
+  }
+  .coffee__nav ul {
+    @apply flex items-center 
+    justify-center mt-6;
+  }
+  .coffee__nav ul li {
+    @apply px-4 pb-3 border-b-4 border-transparent;
+  }
+  .coffee__nav ul li.active {
+    @apply border-b-4 border-berde;
+  }
+  .coffee__nav ul li a {
+    @apply text-lg font-semibold;
+  }
+  .coffee__tab {
+    @apply bg-lightberde relative h-[500px] md:h-[250px];
+  }
+  .coffee__item {
+    @apply absolute opacity-0 transition-all top-7 md:grid md:grid-cols-[_2fr,_2fr]
+    md:max-w-[40rem] md:mx-auto md:left-[25%];
+  }
+  .coffee__item.active {
+    @apply opacity-100 transition-all;
+  }
+  .coffee__text h5 {
+    @apply text-xl font-semibold text-center;
+  }
+  .coffee__text p {
+    @apply text-center;
+  }
+  .coffee__text {
+    @apply flex flex-col gap-4 mt-4;
+  }
+
+  /* -------------------------------------GETTING STARTED IS EASY--------------------------------------- */
+.easy__wrapper {
+    @apply py-5 md:py-9 grid grid-cols-1 gap-3 md:grid md:grid-cols-3 md:text-center;
+}
+
+.easy h2 {
+    @apply font-semibold text-center text-2xl;
+}
+
+.easy p {
+    @apply pt-3 text-center;
+}
+
+.easy .easy__wrapper {
+    @apply flex flex-col gap-10 pt-[48px] md:flex md:flex-row md:gap-5 md:ml-14;
+}
+
+.easy__wrapper .easy__step {
+    @apply flex flex-row gap-4 md:flex md:flex-col md:gap-5 md:text-center;
+}
+
+.easy__wrapper .easy__step h2 {
+    @apply  bg-transparent text-berde border-2 border-berde px-5 py-2 rounded-full md:py-2 md:rounded-full md:max-w-14 md:mx-auto md:text-center block md:place-content-center;
+}
+
+ .easy .easy__wrapper .easy__step .easy__text h3{
+    @apply text-lg pb-1 font-semibold;
+} 
+
+.easy .easy__wrapper .easy__step .easy__text a {
+    @apply underline text-berde;
+}
+
+.easy .easy__wrapper .easy__step .easy__text p {
+    @apply pt-3 text-justify md:text-center
+}
+
+/* -------------------------ENDLESS EXTRAS-------------------------------- */
+.extra__wrapper {
+    @apply py-5 
+}
+
+.extra__wrapper .extra__title h2 {
+    @apply text-lg font-semibold text-center;
+}
+
+.extra__wrapper .extra__title p {
+    @apply pt-3 text-sm text-center;
+}
+
+.extra__wrapper .extra__benefits{
+   @apply flex flex-row;
+}
+
+.extra__wrapper .extra__benefits .extra__card {
+    @apply grid grid-cols-[_1fr,_2fr];
+}
+
+.extra__wrapper .extra__benefits .extra__card .extra__rewards img{
+    @apply w-[125px];
+}
+
+.extra__wrapper .extra__benefits .extra__card .extra__details h3 {
+    @apply text-sm
+}
+
+.extra__wrapper .extra__benefits .extra__card .extra__details p {
+    @apply text-sm
+}
+
+.extra__wrapper .extra__benefits .extra__card .extra__details a {
+    @apply text-sm
+}
 
 }
 
@@ -174,11 +431,22 @@
     }
 
     .btn.bg--transparent {
-        @apply bg-transparent text-green-950 border-dark border-[1px];
+        @apply bg-transparent text-green-950 border-dark border-[1px] w-32
+        h-1/2 py-[7px] px-[16px];
+    }
+
+    .btn.bg--transparent-light {
+        @apply bg-transparent text-light border-light border-[1px] w-32
+        h-1/2 py-[7px] px-[16px];
+    }
+
+    .btn.bg--accent {
+        @apply bg-accent text-light border-dark border-[1px] w-32
+        h-1/2 py-[7px] px-[16px];
     }
 
     .btn.bg--berde {
-        @apply bg-berde text-white;
+        @apply bg-berde text-light border-dark border-[1px] w-32
+        h-1/2 py-[7px] px-[16px];
     }
-
 }
